@@ -17,6 +17,8 @@ int main() {
 			  << "Estoy pensando en un numero entre 0 y 99"
 			  << std::endl;
 
+	bool adivinoElSecreto = false;
+
 	unsigned int intentosRestantes = 3;
 
 	do {
@@ -28,7 +30,9 @@ int main() {
 
 		std::cin >> numeroArriesgado;
 
-		if (numeroArriesgado == numeroSecreto) {
+		adivinoElSecreto = (numeroArriesgado == numeroSecreto);
+
+		if (adivinoElSecreto) {
 
 			std::cout << "Ganaste" << std::endl;
 
@@ -40,7 +44,7 @@ int main() {
 		intentosRestantes = intentosRestantes - 1;
 
 	} while ((intentosRestantes > 0) &&
-			 (numeroArriesgado != numeroSecreto));
+			 (! adivinoElSecreto));
 
 	return 0;
 }
