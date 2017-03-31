@@ -8,5 +8,7 @@ int main() {
 
 	int numeroArriesgado;
 
+	const int numeroSecreto = 7;
+
 	return 0;
 }
