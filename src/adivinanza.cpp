@@ -19,7 +19,7 @@ int main() {
 
 	unsigned int intentosRestantes = 3;
 
-	while (intentosRestantes > 0) {
+	do {
 
 		std::cout << "Tenés "
 				  << intentosRestantes
@@ -38,7 +38,9 @@ int main() {
 		}
 
 		intentosRestantes = intentosRestantes - 1;
-	}
+
+	} while ((intentosRestantes > 0) &&
+			 (numeroArriesgado != numeroSecreto));
 
 	return 0;
 }
