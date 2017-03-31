@@ -6,5 +6,7 @@
  */
 int main() {
 
+	int numeroArriesgado;
+
 	return 0;
 }
