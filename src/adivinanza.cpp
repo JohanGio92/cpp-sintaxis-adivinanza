@@ -19,5 +19,10 @@ int main() {
 
 	std::cin >> numeroArriesgado;
 
+	if (numeroArriesgado == numeroSecreto) {
+
+		std::cout << "Ganaste" << std::endl;
+	}
+
 	return 0;
 }
