@@ -17,6 +17,7 @@ int main() {
 			  << "Estoy pensando en un numero entre 0 y 99"
 			  << std::endl;
 
+	std::cin >> numeroArriesgado;
 
 	return 0;
 }
