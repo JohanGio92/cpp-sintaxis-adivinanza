@@ -17,15 +17,27 @@ int main() {
 			  << "Estoy pensando en un numero entre 0 y 99"
 			  << std::endl;
 
-	std::cin >> numeroArriesgado;
+	unsigned int intentosRestantes = 3;
 
-	if (numeroArriesgado == numeroSecreto) {
+	while (intentosRestantes > 0) {
 
-		std::cout << "Ganaste" << std::endl;
+		std::cout << "Tenés "
+				  << intentosRestantes
+				  << " intentos"
+				  << std::endl;
 
-	} else {
+		std::cin >> numeroArriesgado;
 
-		std::cout << "Perdiste" << std::endl;
+		if (numeroArriesgado == numeroSecreto) {
+
+			std::cout << "Ganaste" << std::endl;
+
+		} else {
+
+			std::cout << "No" << std::endl;
+		}
+
+		intentosRestantes = intentosRestantes - 1;
 	}
 
 	return 0;
