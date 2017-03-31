@@ -19,9 +19,9 @@ int main() {
 
 	bool adivinoElSecreto = false;
 
-	unsigned int intentosRestantes = 3;
-
-	do {
+	for (unsigned int intentosRestantes = 3;
+		 (intentosRestantes > 0) && (! adivinoElSecreto);
+		 intentosRestantes--) {
 
 		std::cout << "Tenés "
 				  << intentosRestantes
@@ -32,19 +32,22 @@ int main() {
 
 		adivinoElSecreto = (numeroArriesgado == numeroSecreto);
 
-		if (adivinoElSecreto) {
-
-			std::cout << "Ganaste" << std::endl;
-
-		} else {
+		if (! adivinoElSecreto) {
 
 			std::cout << "No" << std::endl;
+
 		}
+	}
 
-		intentosRestantes = intentosRestantes - 1;
+	if (adivinoElSecreto) {
 
-	} while ((intentosRestantes > 0) &&
-			 (! adivinoElSecreto));
+		std::cout << "Ganaste" << std::endl;
+
+	} else {
+
+		std::cout << "Perdiste" << std::endl;
+
+	}
 
 	return 0;
 }
