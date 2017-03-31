@@ -22,6 +22,10 @@ int main() {
 	if (numeroArriesgado == numeroSecreto) {
 
 		std::cout << "Ganaste" << std::endl;
+
+	} else {
+
+		std::cout << "Perdiste" << std::endl;
 	}
 
 	return 0;
